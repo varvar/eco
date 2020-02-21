@@ -1,9 +1,10 @@
-# project-1
+# EcoPlant Test
 
-a [Sails v1](https://sailsjs.com) application
+### Description
 
+https://documenter.getpostman.com/view/2035283/SzKVPxB1?version=latest.
 
-### Links
+### Installation 
 
 + [Sails framework documentation](https://sailsjs.com/get-started)
 + [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
@@ -12,9 +13,9 @@ a [Sails v1](https://sailsjs.com) application
 + [Professional / enterprise options](https://sailsjs.com/enterprise)
 
 
-### Version info
+### API info
 
-This app was originally generated on Tue Feb 18 2020 15:14:50 GMT+0200 (Israel Standard Time) using Sails v1.2.3.
+https://documenter.getpostman.com/view/2035283/SzKVPxB1?version=latest.
 
 <!-- Internally, Sails used [`sails-generate@1.16.13`](https://github.com/balderdashy/sails-generate/tree/v1.16.13/lib/core-generators/new). -->
 
