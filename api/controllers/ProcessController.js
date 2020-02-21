@@ -37,20 +37,22 @@ const getLatesSamples = (ctx, cb) => {
 };
 
 const evaluateRule = (ctx, cb) => {
-	let getQuery = `SELECT * FROM rule WHERE rule.id = ${ctx.ruleId}`;
+	let regExp = /\{.*?\}/g;
+	let rulesAr=ctx.rule.rule.split('or');
+	ctx.rulesFiltered = [];
+	const samplesIteratee = x => {
+		rulesAr.forEach(element => {
+			let matches = element.match(regExp);
+			let type = matches[0].substring(1, matches[0].length - 1);
+			let applicableRule = element.replace('{'+type+'}', x.value);
+			if(type === x.type && eval(applicableRule)){
+				ctx.rulesFiltered.push(x);
+			};
+		});
+	};
 
-	Rules.query(getQuery, (err, rules) => {
-	    if (err) 
-	        return cb(err);
-	    
-
-	    if (!rules || rules.rows.length === 0)
-	        return cb({'error':'Rule is missing'});
-	    
-
-	    ctx.rule = R.head(rules.rows);
-	    cb(null,ctx);
-	});
+	R.forEach(samplesIteratee, ctx.samples);
+	cb(null,ctx);
 };
 
 module.exports = {
@@ -69,11 +71,17 @@ module.exports = {
 	        getLatesSamples,
 	        evaluateRule
 	    )(ctx, (err,finalCtx)=>{
-	    	console.log('ProcessController.js line 58: ', finalCtx);
 	    	if (err)
                 return res.json(err);
             
-	    	res.json(finalCtx.samples);
+            let respObj = {
+            	ruleEvaluation: true,
+            	samples:finalCtx.rulesFiltered
+            }
+            if (finalCtx.rulesFiltered.length === 0) 
+            	respObj.ruleEvaluation = false;
+
+	    	res.json(respObj);
 	    });
 	},
 
