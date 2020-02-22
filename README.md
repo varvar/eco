@@ -2,15 +2,17 @@
 
 ### Description
 
-https://documenter.getpostman.com/view/2035283/SzKVPxB1?version=latest.
+Please note, that project is for demo purpose only, all validations are very basic and authentication is missing.
+Try to not insert unwanted values to DB.
 
 ### Installation 
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
++ cd to the folder you want to install the project
++ git clone https://github.com/varvar/ecoPlant.git
++ cd to ecoPlant folder
++ npm install
++ sails lift
++ once app is started all API's will be availiable.
 
 
 ### API info

@@ -34,7 +34,10 @@ module.exports.routes = {
   'delete /api/rules': { controller: 'Rule', action: 'delete', skipAssets: true },
 
   // rules execution
-  'get /api/process/:ruleId': { controller: 'Process', action: 'index', skipAssets: true }
+  'get /api/process/:ruleId': { controller: 'Process', action: 'index', skipAssets: true },
+
+  // etl execution
+  'get /api/pressure/:set': { controller: 'Etl', action: 'index', skipAssets: true }
 
 
   /***************************************************************************
