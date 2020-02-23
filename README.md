@@ -5,6 +5,11 @@
 Please note, that project is for demo purpose only, all validations are very basic and authentication is missing.
 Try to not insert unwanted values to DB.
 
++ CRUD for rules located in /api/RuleController.js
++ CRUD for samples located in /api/DataController.js
++ Rules evaluation logic is in /api/ProcessController.js
++ Bonus ETL queries logic is in /api/EtlController.js
+
 ### Installation 
 
 + cd to the folder you want to install the project
