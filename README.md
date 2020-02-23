@@ -13,7 +13,7 @@ Try to not insert unwanted values to DB.
 ### Installation 
 
 + cd to the folder you want to install the project
-+ Be sure you have nodejs and git installed on your computer.
++ Be sure you have nodejs 10 or higher and git installed on your computer.
 + git clone https://github.com/varvar/ecoPlant.git
 + cd to ecoPlant folder
 + npm install

@@ -30,7 +30,7 @@
     "type": "git",
     "url": "git://github.com/root/project-1.git"
   },
-  "author": "MIchael Sobol",
+  "author": "Michael Sobol",
   "license": "",
   "engines": {
     "node": "^10.18"
