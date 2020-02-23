@@ -13,10 +13,11 @@ Try to not insert unwanted values to DB.
 ### Installation 
 
 + cd to the folder you want to install the project
++ Be sure you have nodejs and git installed on your computer.
 + git clone https://github.com/varvar/ecoPlant.git
 + cd to ecoPlant folder
 + npm install
-+ sails lift
++ npm start
 + Once app is started all API's will be availiable.
 + API and app are listening to port 1337 and availiable on http://localhost:1337
 
